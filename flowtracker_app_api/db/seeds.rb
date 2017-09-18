@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create([
+  { username: "Polymath", email: "p@p.com"},
+  { username: "Aeromass", email: "flyer@glider.com"},
+  { username: "Magician", email: "mage@magus.com"}
+  ])
+
+Link.create([
+  { url: "https://www.youtube.com/watch?v=rWE7fTXytmI", media_type: "youtube", genre: "Grime"},
+  { url: "https://www.youtube.com/watch?v=gcroTw04i-w", media_type: "youtube", genre: "Grime"},
+  { url: "https://www.youtube.com/watch?v=xC079oyK7-c", media_type: "youtube", genre: "Grime"},
+  ])
