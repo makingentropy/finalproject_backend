@@ -16,6 +16,8 @@ class LinksController < ApplicationController
   # POST /links
   def create
     @link = Link.new(link_params)
+    # creating a task params id to belong to a link
+    # @link.link_id = params[:link_id]
 
     if @link.save
       render json: @link, status: :created, location: @link

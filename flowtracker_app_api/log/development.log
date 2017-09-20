@@ -180,3 +180,390 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/links" for 127.0.0.1 at 2017-09-19 21:41:10 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#create as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "me"=>"\"youtube\"", "genre"=>"\"Grime\""}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:18:in `create'
+Started GET "/links" for 127.0.0.1 at 2017-09-19 21:41:28 -0500
+Processing by LinksController#index as */*
+  [1m[36mLink Load (2.9ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 43ms (Views: 25.1ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2017-09-19 21:42:21 -0500
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/link" for 127.0.0.1 at 2017-09-19 21:42:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/link"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PUT "/links/1" for 127.0.0.1 at 2017-09-19 21:43:38 -0500
+Processing by LinksController#update as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"youtube\"", "genre"=>"\"Grime\"", "id"=>"1"}
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:29:in `update'
+Started PUT "/links/1" for 127.0.0.1 at 2017-09-19 21:44:22 -0500
+Processing by LinksController#update as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"youtube\"", "genre"=>"\"Grime\"", "id"=>"1"}
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:29:in `update'
+Started PUT "/links/1/" for 127.0.0.1 at 2017-09-19 21:44:32 -0500
+Processing by LinksController#update as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"youtube\"", "genre"=>"\"Grime\"", "id"=>"1"}
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:29:in `update'
+Started DELETE "/links/1/" for 127.0.0.1 at 2017-09-19 21:45:34 -0500
+Processing by LinksController#destroy as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"youtube\"", "genre"=>"\"Grime\"", "id"=>"1"}
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "links" WHERE "links"."id" = $1[0m  [["id", 1]]
+  [1m[35m (160.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 165ms (ActiveRecord: 161.9ms)
+
+
+Started GET "/links/" for 127.0.0.1 at 2017-09-19 21:45:46 -0500
+Processing by LinksController#index as */*
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2017-09-19 21:46:54 -0500
+Processing by LinksController#index as */*
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/links" for 127.0.0.1 at 2017-09-19 22:12:55 -0500
+Processing by LinksController#create as */*
+  Parameters: {":url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", ":media_type"=>"\"youtube\"", ":genre"=>"\"Grime\""}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:18:in `create'
+Started POST "/links/" for 127.0.0.1 at 2017-09-19 22:13:23 -0500
+Processing by LinksController#create as */*
+  Parameters: {":url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", ":media_type"=>"\"youtube\"", ":genre"=>"\"Grime\""}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:18:in `create'
+Started POST "/links/" for 127.0.0.1 at 2017-09-19 22:13:46 -0500
+Processing by LinksController#create as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"youtube\"", "genre"=>"\"Grime\""}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:18:in `create'
+Started POST "/links/2" for 127.0.0.1 at 2017-09-19 22:14:00 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/links/2"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/links/2/" for 127.0.0.1 at 2017-09-19 22:14:20 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/links/2"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/links/2" for 127.0.0.1 at 2017-09-19 22:14:42 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/links/2"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/links/2/" for 127.0.0.1 at 2017-09-19 22:14:46 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/links/2"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/links/" for 127.0.0.1 at 2017-09-19 22:24:55 -0500
+Processing by LinksController#create as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"youtube\"", "genre"=>"\"Grime\""}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:18:in `create'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "links"[0m
+Started GET "/links/2/" for 127.0.0.1 at 2017-09-19 23:23:51 -0500
+Processing by LinksController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links/1/" for 127.0.0.1 at 2017-09-19 23:23:58 -0500
+Processing by LinksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mLink Load (0.4ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Link with 'id'=1):
+  
+app/controllers/links_controller.rb:44:in `set_link'
+Started GET "/links/2/" for 127.0.0.1 at 2017-09-19 23:24:07 -0500
+Processing by LinksController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/links/2/" for 127.0.0.1 at 2017-09-19 23:24:56 -0500
+Processing by LinksController#update as */*
+  Parameters: {"media_type"=>"\"testtube\"", "id"=>"2"}
+  [1m[36mLink Load (0.4ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:49:in `link_params'
+app/controllers/links_controller.rb:29:in `update'
+Started POST "/links/" for 127.0.0.1 at 2017-09-19 23:35:43 -0500
+Processing by LinksController#create as */*
+  Parameters: {"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"testtube\"", "genre"=>"\"Grime\""}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: link):
+  
+app/controllers/links_controller.rb:51:in `link_params'
+app/controllers/links_controller.rb:18:in `create'
+Started POST "/links/" for 127.0.0.1 at 2017-09-19 23:46:42 -0500
+Processing by LinksController#create as */*
+  Parameters: {"link"=>{"url"=>"\"https://www.youtube.com/watch?v=f55YH5r_Ob4\"", "media_type"=>"\"testtube\"", "genre"=>"\"Grime\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "links" ("url", "media_type", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["url", "\"https://www.youtube.com/watch?v=f55YH5r_Ob4\""], ["media_type", "\"testtube\""], ["genre", "\"Grime\""], ["created_at", "2017-09-20 04:46:42.045191"], ["updated_at", "2017-09-20 04:46:42.045191"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 15ms (Views: 1.0ms | ActiveRecord: 5.5ms)
+
+
+Started PUT "/links/2/" for 127.0.0.1 at 2017-09-19 23:47:38 -0500
+Processing by LinksController#update as */*
+  Parameters: {"link"=>{"media_type"=>"\"tester\""}, "id"=>"2"}
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE "links"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "links" SET "media_type" = $1, "updated_at" = $2 WHERE "links"."id" = $3[0m  [["media_type", "\"tester\""], ["updated_at", "2017-09-20 04:47:38.318773"], ["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 04:07:30 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2017-09-20 04:07:34 -0500
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/links" for 127.0.0.1 at 2017-09-20 04:08:38 -0500
+Processing by LinksController#create as HTML
+  Parameters: {"link"=>{"url"=>"test test", "media_type"=>"test", "genre"=>"test"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "links" ("url", "media_type", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["url", "test test"], ["media_type", "test"], ["genre", "test"], ["created_at", "2017-09-20 09:08:38.888789"], ["updated_at", "2017-09-20 09:08:38.888789"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/links" for 127.0.0.1 at 2017-09-20 04:09:03 -0500
+Processing by LinksController#create as HTML
+  Parameters: {"link"=>{"url"=>"test test", "media_type"=>"test", "genre"=>"test"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "links" ("url", "media_type", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["url", "test test"], ["media_type", "test"], ["genre", "test"], ["created_at", "2017-09-20 09:09:03.236812"], ["updated_at", "2017-09-20 09:09:03.236812"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 9ms (Views: 1.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2017-09-20 04:09:13 -0500
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.4ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-20 04:09:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
