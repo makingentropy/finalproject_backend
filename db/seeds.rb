@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create([
-  { username: "Polymath", email: "p@p.com"},
-  { username: "Aeromass", email: "flyer@glider.com"},
-  { username: "Magician", email: "mage@magus.com"}
+  { username: "Polymath", email: "p@p.com", password_digest: "blah"},
+  { username: "Aeromass", email: "flyer@glider.com", password_digest: "blah"},
+  { username: "Magician", email: "mage@magus.com", password_digest: "blah"}
   ])
 
 Link.create([

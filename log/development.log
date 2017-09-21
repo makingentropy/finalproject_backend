@@ -617,3 +617,110 @@ Processing by LinksController#create as HTML
 Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 3.4ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(115290406499412480)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUsers (20170921095809)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170921095809"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(115290406499412480)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Polymath"], ["email", "p@p.com"], ["created_at", "2017-09-21 10:01:41.977779"], ["updated_at", "2017-09-21 10:01:41.977779"], ["password_digest", "blah"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Aeromass"], ["email", "flyer@glider.com"], ["created_at", "2017-09-21 10:01:41.984559"], ["updated_at", "2017-09-21 10:01:41.984559"], ["password_digest", "blah"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Magician"], ["email", "mage@magus.com"], ["created_at", "2017-09-21 10:01:41.987036"], ["updated_at", "2017-09-21 10:01:41.987036"], ["password_digest", "blah"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "links" ("url", "media_type", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["url", "https://www.youtube.com/watch?v=rWE7fTXytmI"], ["media_type", "youtube"], ["genre", "Grime"], ["created_at", "2017-09-21 10:01:42.000104"], ["updated_at", "2017-09-21 10:01:42.000104"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "links" ("url", "media_type", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["url", "https://www.youtube.com/watch?v=gcroTw04i-w"], ["media_type", "youtube"], ["genre", "Grime"], ["created_at", "2017-09-21 10:01:42.003614"], ["updated_at", "2017-09-21 10:01:42.003614"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "links" ("url", "media_type", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["url", "https://www.youtube.com/watch?v=xC079oyK7-c"], ["media_type", "youtube"], ["genre", "Grime"], ["created_at", "2017-09-21 10:01:42.006368"], ["updated_at", "2017-09-21 10:01:42.006368"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "BBQ"], ["email", "1234"], ["created_at", "2017-09-21 10:24:13.986515"], ["updated_at", "2017-09-21 10:24:13.986515"], ["password_digest", "$2a$10$9JB7v99GBbABcvBDap3.PO/EbKz.TXofEbSN6a7mZxQmBCpHwiROa"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 05:41:23 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"BBQ", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BBQ"], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 05:41:36 -0500
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"BBQ", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BBQ"], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 0.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 05:42:06 -0500
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"BBQ", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BBQ"], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 05:42:18 -0500
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"BBQ", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BBQ"], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 06:35:13 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+          id: id,
+             ^
+/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 06:35:48 -0500
+  
+SyntaxError (/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+          id: id,
+             ^
+/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 06:35:52 -0500
+  
+SyntaxError (/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+          id: id,
+             ^
+/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 10:28:18 -0500
+  
+SyntaxError (/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+          id: id,
+             ^
+/home/eric/FINAL_PROJECT/finalproject_backend/flowtracker_app_api/app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:69: syntax error, unexpected ':', expecting '}'
+app/controllers/users_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/users/login" for 127.0.0.1 at 2017-09-21 10:33:22 -0500
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"BBQ", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BBQ"], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 0.6ms | ActiveRecord: 11.2ms)
+
+
